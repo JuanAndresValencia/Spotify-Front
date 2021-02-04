@@ -229,6 +229,114 @@ section{
     font-weight: 300;
 }
 
+article{
+    width: 100%;
+    height: auto;
+    background-color: black;
+    color: white;
+}
+
+.subcontenedor-articulo{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contenedor-titulo-article h1{
+    color: white;
+    font-size: 37px;
+    font-family: var(--Fuente-titulos);
+}
+
+.contenedor-listas-reproduccion{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    max-width: 1700px;
+    margin-top: 50px;
+    padding-bottom: 90px;
+}
+
+.contenedor-listas-reproduccion img{
+    width: 370px;
+    margin-top: 20px;
+    transition: transform, 1s;
+}
+
+.contenedor-listas-reproduccion img:hover{
+    transform: scale(1.2);
+}
+
+footer{
+    width: 100%;
+    height: auto;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.subcontenedor-footer{
+    width: 100%;
+    height: auto;
+    background-color: black;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-items: center;
+    align-items: start;
+    padding-top: 200px;
+    padding-bottom: 40px;
+    max-width: 1700px;
+}
+
+.footer-cajon1 img{
+    width: 140px;
+    cursor: pointer;
+}
+
+.footer-cajon5 img{
+    width: 70px;
+}
+
+.texto-principal-cajones{
+    font-size: 18px;
+    font-family: var(--Fuente-titulos);
+    font-weight: bolder;
+}
+
+.texto-secundario-cajones{
+    font-size: 16px;
+    margin-top: 18px;
+    font-family: var(--Fuente-titulos);
+}
+
+.texto-secundario-cajones:hover{
+    color: #1DD760;
+    cursor: pointer;
+}
+
+/*Animacion de rotacion del logo de spotify*/
+.footer-cajon5 img{
+     animation-name: rotacion;
+     cursor: pointer;
+     user-select: none;
+     animation-duration: 3s;
+     animation-timing-function: linear;
+     animation-iteration-count: infinite;
+}
+
+@keyframes rotacion{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
 }
 
 
@@ -409,6 +517,114 @@ section{
         font-family: var(--Fuente-texto);
         font-weight: 300;
     }
+
+    article{
+        width: 100%;
+        height: auto;
+        background-color: black;
+        color: white;
+    }
+    
+    .subcontenedor-articulo{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .contenedor-titulo-article h1{
+        color: white;
+        font-size: 37px;
+        font-family: var(--Fuente-titulos);
+        text-align: center;
+    }
+    
+    .contenedor-listas-reproduccion{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-items: center;
+        max-width: 1700px;
+        margin-top: 50px;
+        padding-bottom: 90px;
+    }
+    
+    .contenedor-listas-reproduccion img{
+        width: 370px;
+        margin-top: 20px;
+        transition: transform, 1s;
+    }
+    
+    .contenedor-listas-reproduccion img:hover{
+        transform: scale(1.2);
+    }
+
+    footer{
+        width: 100%;
+        height: auto;
+        background-color: black;
+        color: white;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .subcontenedor-footer{
+        width: 100%;
+        height: auto;
+        background-color: black;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        justify-items: center;
+        align-items: start;
+        padding-top: 200px;
+        padding-bottom: 40px;
+        max-width: 1700px;
+    }
+    
+    .footer-cajon1 img{
+        width: 140px;
+    }
+    
+    .footer-cajon5 img{
+        width: 70px;
+    }
+
+    .texto-principal-cajones{
+        font-size: 18px;
+        font-family: var(--Fuente-titulos);
+        font-weight: bolder;
+    }
+    
+    .texto-secundario-cajones{
+        font-size: 16px;
+        margin-top: 18px;
+        font-family: var(--Fuente-titulos);
+    }
+    
+    .texto-secundario-cajones:hover{
+        color: #1DD760;
+        cursor: pointer;
+    }
+
+    /*Animacion de rotacion del logo de spotify*/
+.footer-cajon5 img{
+    animation-name: rotacion;
+    cursor: pointer;
+    user-select: none;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rotacion{
+   from{
+       transform: rotate(0deg);
+   }
+   to{
+       transform: rotate(360deg);
+   }
+}
 }
 
 
@@ -508,5 +724,90 @@ section{
         width: 100%;
         text-align: center;
         font-size: 25px;
+    }
+}
+
+/*Estilos article responsive*/
+
+@media screen and (max-width: 1500px){
+    .contenedor-listas-reproduccion{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        max-width: 1700px;
+        margin-top: 50px;
+    }
+}
+
+@media screen and (max-width: 920px){
+    .contenedor-listas-reproduccion{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+        max-width: 1700px;
+        margin-top: 50px;
+    }
+
+    footer{
+        width: 100%;
+        height: auto;
+        background-color: black;
+        color: white;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .subcontenedor-footer{
+        width: 100%;
+        height: auto;
+        background-color: black;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+        text-align: center;
+        align-items: start;
+        padding-top: 200px;
+        padding-bottom: 40px;
+        max-width: 1700px;
+        gap: 50px;
+    }
+    
+    .footer-cajon1 img{
+        width: 140px;
+    }
+    
+    .footer-cajon5 img{
+        width: 70px;
+    }
+
+    .texto-principal-cajones{
+        font-size: 18px;
+        font-family: var(--Fuente-titulos);
+        font-weight: bolder;
+    }
+    
+    .texto-secundario-cajones{
+        font-size: 16px;
+        margin-top: 18px;
+        font-family: var(--Fuente-titulos);
+    }
+    
+    .texto-secundario-cajones:hover{
+        color: #1DD760;
+        cursor: pointer;
+    }
+
+
+
+    
+}
+
+@media screen and (max-width: 450px){
+    .contenedor-listas-reproduccion img{
+        width: 270px;
+        margin-top: 20px;
+        transition: transform, 1s;
     }
 }
