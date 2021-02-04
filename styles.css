@@ -1,0 +1,512 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@100&display=swap');
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/*Variables predefinidas de estilo*/
+:root{
+   --Fuente-titulos: 'Archivo', sans-serif;
+   --Fuente-texto: 'Sarabun', sans-serif;
+}
+
+.contenedor-total{
+    width: 100%;
+}
+
+.subcontenedor-total{
+    width: 100%;
+}
+
+@media screen and (min-width: 1050px){
+    /*Estilos header*/
+header{
+    width: 100%;
+    height: 80px;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+}
+
+header > .subcontenedor-header{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    max-width: 1600px;
+    height: 80px;
+    background-color: #000;
+    gap: 150px;
+}
+
+.dev-name{
+    font-size: 40px;
+}
+
+header .subcontenedor-header input{
+    height: 30px;
+    width: 200px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    padding: 10px;
+    padding-left: 30px;
+    background-image: url("./assets/iconlupa.svg");
+    background-repeat: no-repeat;
+    background-position: start;
+    background-position-y: center;
+    margin-top: 20px;
+    cursor: pointer;
+    font-family: var(--Fuente-texto);
+    font-weight: bolder;
+    font-size: 16px;
+}
+
+header .subcontenedor-header p{
+    margin-top: 30px;
+    color: white;
+    font-size: 20px;
+    font-family: var(--Fuente-texto);
+    font-weight: bolder;
+}
+
+/*Estilos nav*/
+
+nav{
+    width: 100%;
+    height: 430px;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+}
+
+.subcontenedor-nav{
+    width: 100%;
+    height: 430px;
+    background-color: #000;
+    display: flex;
+    flex-direction: row;
+    max-width: 1600px;
+}
+
+.contenedor-caratula{
+    display: flex;
+    width: 600px;
+    justify-content: center;
+    align-items: center;
+}
+.contenedor-caratula img{
+    width: 380px;
+    height: 360px;
+}
+
+.contenedor-texto{
+    color: white;
+    width: 900px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contenedor-texto h1{
+    font-size: 30px;
+    margin-top: 30px;
+    font-family: var(--Fuente-titulos);
+}
+
+.contenedor-texto p{
+    margin-top: 12px;
+    width: 500px;
+    text-align: start;
+    font-size: 19px;
+    font-family: var(--Fuente-texto);
+}
+
+.contenedor-botones{
+    display: flex;
+    height: 430px;
+    align-items: flex-end;
+    margin-bottom: 33px;
+    gap: 20px;
+}
+
+.contenedor-botones button{
+    height: 35px;
+}
+
+.btn-mayor{
+    width: 250px;
+    background-color: transparent;
+    border: 1px solid #66D36E;
+    border-radius: 10px;
+    outline: none;
+    font-size: 16px;
+    font-family: var(--Fuente-titulos);
+    cursor: pointer;
+}
+
+.btn-mayor a{
+    text-decoration: none;
+    color: white;
+}
+
+.btn-menor{
+    width: 130px;
+    background-color: #66D36E;
+    border: none;
+    border-radius: 13px;
+    font-size: 16px;
+    font-family: var(--Fuente-titulos);
+    cursor: pointer;
+    outline: none;
+}
+
+.btn-menor a{
+    text-decoration: none;
+    color: white;
+}
+
+/*Estilos Section */
+section{
+    width: 100%;
+    height: auto;
+    min-height: 100px;
+    background-color: #000;
+    color: white;
+}
+
+.subcontenedor-section{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contenedor-titulo-section{
+    margin-top: 100px;
+    font-family: var(--Fuente-titulos);
+    font-size: 25px;
+}
+
+.contenedor-artistas{
+    width: 100%;
+    height: auto;
+    max-width: 1500px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-items: center;
+    margin-top: 30px;
+    grid-row-gap: 20px;
+    padding-bottom: 100px;
+}
+
+.contenedor-artistas img{
+    width: 200px;
+    transition: transform 1s;
+    cursor: pointer;
+}
+
+.contenedor-artistas img:hover{
+    transform: scale(1.3);
+}
+
+.singer{
+    color:white;
+    font-size: 20px;
+    font-family: var(--Fuente-titulos);
+    margin-top: 4px;
+    text-align: start;
+}
+
+.follow{
+    color:white;
+    font-size: 16px;
+    font-family: var(--Fuente-texto);
+    font-weight: 300;
+}
+
+}
+
+
+/*Version Mobile*/
+
+@media screen and (max-width: 1049px){
+    /*Estilos header*/
+    header{
+        width: 100%;
+        height: auto;
+        background-color: #000;
+    }
+
+    header .subcontenedor-header input{
+        height: 30px;
+        width: 200px;
+        border-radius: 10px;
+        border: none;
+        outline: none;
+        padding: 10px;
+        padding-left: 30px;
+        background-image: url("./assets/iconlupa.svg");
+        background-repeat: no-repeat;
+        background-position: start;
+        background-position-y: center;
+        margin-top: 20px;
+        cursor: pointer;
+        font-family: var(--Fuente-texto);
+        font-weight: bolder;
+        font-size: 16px;
+    }
+
+    header .subcontenedor-header p{
+        margin-top: 10px;
+        color: white;
+        font-size: 20px;
+        font-family: var(--Fuente-texto);
+        font-weight: bolder;
+    }
+    
+
+    .subcontenedor-header{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 100px;
+        align-items: center;
+    }
+
+    .subcontenedor-header img{
+        width: 100px;
+        color: white;
+    }
+
+    .subcontenedor-header p{
+        color: white;
+    }
+
+    /*Estilos nav*/
+    nav{
+        width: 100%;
+        background-color: #000;
+    }
+
+    .subcontenedor-nav{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 50px;
+    }
+
+    .contenedor-caratula img{
+        width: 300px;
+        margin-top: 20px;
+    }
+
+    .contenedor-texto{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .contenedor-texto h1{
+        font-size: 27px;
+        margin-top: 10px;
+        font-family: var(--Fuente-titulos);
+        color: white;
+    }
+
+    .contenedor-texto p{
+        color: white;
+        font-size: 18px;
+        margin-top: 10px;
+        font-family: var(--Fuente-texto);
+    }
+
+    .contenedor-botones{
+        margin-top: 30px;
+        display: flex;
+        gap: 20px;
+
+    }
+
+    .contenedor-botones button{
+        width: 130px;
+        padding: 3px;
+        background-color: #66D36E;
+        border: none;
+        border-radius: 8px;
+    }
+
+    .contenedor-botones button a{
+        text-decoration: none;
+        color: white;
+    }
+
+
+    /*Estilos Section*/
+
+    section{
+        width: 100%;
+        height: auto;
+        min-height: 100px;
+        background-color: #000;
+        color: white;
+    }
+    
+    .subcontenedor-section{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .contenedor-titulo-section{
+        margin-top: 100px;
+        font-family: var(--Fuente-titulos);
+        font-size: 25px;
+    }
+    
+    .contenedor-artistas{
+        width: 100%;
+        height: auto;
+        max-width: 1500px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        margin-top: 30px;
+        grid-row-gap: 20px;
+        padding-bottom: 100px;
+    }
+    
+    .contenedor-artistas img{
+        width: 200px;
+        transition: transform 1s;
+        cursor: pointer;
+    }
+    
+    .contenedor-artistas img:hover{
+        transform: scale(1.3);
+    }
+    
+    .singer{
+        color:white;
+        font-size: 20px;
+        font-family: var(--Fuente-titulos);
+        margin-top: 4px;
+        text-align: start;
+    }
+    
+    .follow{
+        color:white;
+        font-size: 16px;
+        font-family: var(--Fuente-texto);
+        font-weight: 300;
+    }
+}
+
+
+@media screen and (max-width: 620px){
+    header{
+        width: 100%;
+        background-color: #000;
+    }
+
+    .subcontenedor-header{
+        width: 100%;
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+    }
+
+    .subcontenedor-header img{
+        width: 100px;
+        color: white;
+    }
+
+    .subcontenedor-header p{
+        color: white;
+    }
+
+    /*Estilos Section*/
+
+    section{
+        width: 100%;
+        height: auto;
+        min-height: 100px;
+        background-color: #000;
+        color: white;
+    }
+    
+    .subcontenedor-section{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .contenedor-titulo-section{
+        margin-top: 100px;
+        font-family: var(--Fuente-titulos);
+        font-size: 25px;
+    }
+    
+    .contenedor-artistas{
+        width: 100%;
+        height: auto;
+        max-width: 1500px;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+        margin-top: 30px;
+        grid-row-gap: 20px;
+        padding-bottom: 100px;
+    }
+    
+    .contenedor-artistas img{
+        width: 200px;
+        transition: transform 1s;
+        cursor: pointer;
+    }
+    
+    .contenedor-artistas img:hover{
+        transform: scale(1.3);
+    }
+    
+    .singer{
+        color:white;
+        font-size: 20px;
+        font-family: var(--Fuente-titulos);
+        margin-top: 4px;
+        text-align: start;
+    }
+    
+    .follow{
+        color:white;
+        font-size: 16px;
+        font-family: var(--Fuente-texto);
+        font-weight: 300;
+    }
+}
+
+
+/*Corregir el tamaño de la imagen del header y el texto de la seccion de cantantes*/
+
+@media screen and (max-width: 380px){
+    .contenedor-caratula img{
+        width: 200px;
+        margin-top: 20px;
+    }
+
+    .subcontenedor-section .contenedor-titulo-section h1{
+        width: 100%;
+        text-align: center;
+        font-size: 25px;
+    }
+}
